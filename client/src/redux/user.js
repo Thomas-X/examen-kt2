@@ -1,8 +1,4 @@
 import axios from 'axios';
-import { Dispatch } from 'react-redux';
-import { ActionType, ReduxStateUser } from './index';
-import { AnyAction } from 'redux';
-
 const USER_LOAD = 'USER_LOAD';
 const USER_SUCCESS = 'USER_SUCCESS';
 const USER_FAIL = 'USER_FAIL';

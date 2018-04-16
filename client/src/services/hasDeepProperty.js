@@ -26,11 +26,13 @@ export const getData = (requestName, props) => {
 };
 
 export const getErrorMessage = (name, props) => {
-    if (props[name].error) {
-        if (props[name].error.response) {
-            if (props[name].error.response.data) {
-                if (props[name].error.response.data.message) {
-                    return props[name].error.response.data.message;
+    if(props[name]) {
+        if (props[name].error) {
+            if (props[name].error.response) {
+                if (props[name].error.response.data) {
+                    if (props[name].error.response.data.message) {
+                        return props[name].error.response.data.message;
+                    }
                 }
             }
         }
