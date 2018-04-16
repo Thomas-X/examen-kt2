@@ -13,6 +13,7 @@ export const defaultState = {
     isLoggedIn: false,
     token: '',
     error: null,
+    role: '',
 };
 
 export default (state = defaultState, action) => {
@@ -22,12 +23,14 @@ export default (state = defaultState, action) => {
                 ...state,
                 isLoggedIn: false,
                 token: '',
+                role: '',
             };
         case USER_SUCCESS:
             return {
                 ...state,
                 isLoggedIn: true,
                 token: action.payload.token,
+                role: action.payload.role,
             };
         case USER_FAIL:
             return {
@@ -35,11 +38,13 @@ export default (state = defaultState, action) => {
                 isLoggedIn: false,
                 token: '',
                 error: action.payload,
+                role: '',
             };
         case USER_CLEAR_ERROR:
             return {
                 ...state,
                 error: null,
+                role: '',
             };
         case USER_LOGOUT:
             return defaultState;
@@ -59,7 +64,7 @@ export const baseFunc = (url) => (values) => (dispatch) => {
                 payload: data,
             });
         })
-        .catch((err: any) => {
+        .catch((err) => {
             dispatch({
                 type: USER_FAIL,
                 payload: err,

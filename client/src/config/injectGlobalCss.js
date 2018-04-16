@@ -1,14 +1,28 @@
 /* tslint:disable */
 import { injectGlobal } from 'styled-components';
-import { BREAKPOINTS, NAVBAR_HEIGHT } from '../constants/constants';
+import { BREAKPOINTS } from '../constants/constants';
 
 export default () => {
     injectGlobal`
 
     body {
-        margin: 0 !important;
+        margin: 2vw;
         padding: 0 !important;
         font-family: 'Roboto', sans-serif;
+        
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: url("https://i.imgur.com/YOsoVl7.jpg");
+            background-size: 100% 100%;
+            opacity: .05;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            position: fixed;
+            pointer-events: none;
+        }
     }
     :root {
     --blue: #007bff;

@@ -112,3 +112,7 @@ class Server {
 }
 
 export default new Server();
+
+process.on('unhandledRejection', function () {
+    // Handle unhandledrejection if needed, if nothing is here unhandled rejections will get ignored
+});

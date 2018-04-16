@@ -11,13 +11,12 @@ const styled = styledComponent;
 
 const Nav = styled.nav`
     width:100%;
-    background-color: ${COLORS.white};
+    background-color: rgba(0, 123, 255, 0.5);
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 0 1rem;
     margin: 0 0 2rem 0;
-    border: 1px solid black;
 `;
 
 const NavListCss = css`
@@ -48,23 +47,30 @@ const NavItem = styled.li`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    &:hover {
+        transition: all 300ms;
+        background-color: rgba(0, 123, 255, 0.6);
+        color: ${COLORS.white};
+    }
 `;
 
 const Navigation = (props) => {
 
     const renderNavItem = (label, to, key, onClick) => (
         <NavItem key={`navitem-${key}`} onClick={onClick}>
-            <Link to={to}>{label}</Link>
+            <Link to={to} style={{ color: 'inherit', textDecoration: 'none' }}>{label}</Link>
         </NavItem>
     );
 
-    const {isLoggedIn} = props.user;
+    const {isLoggedIn, role} = props.user;
 
     return (
         <Nav>
             <Left>
                 {renderNavItem('Home', ROUTES.home.path, 3)}
                 {isLoggedIn && (renderNavItem('Contact', ROUTES.contact.path, 4))}
+                {(isLoggedIn && role === 'medewerker') && (renderNavItem('Cursussen overzicht', ROUTES.viewcursussen.path, 5))}
             </Left>
             <Right>
                 {!isLoggedIn && ([renderNavItem('Login', ROUTES.login.path, 1), renderNavItem('Register', ROUTES.register.path, 2)])}

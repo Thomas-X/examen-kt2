@@ -4,7 +4,7 @@ import { check, validationResult } from 'express-validator/check';
 import is from 'is-js';
 import { sign } from 'jsonwebtoken';
 import uuid from 'uuid/v4';
-import User from '../global/models/User';
+import User from '../global/models/Cursist';
 
 const Auth = Router();
 
@@ -48,8 +48,10 @@ Auth.post('/register', validations, checkIfValidatorFailed, async (req, res, nex
                 password: await hash(password1, Number(process.env.salt)),
             };
             await User.create(user);
+            const usr = (await User.find({ id: id }))[0];
             return res.json({
                 token: sign({ sub: id }, process.env.secretKey),
+                role: usr.role,
             });
         }
     } catch (err) {
@@ -75,6 +77,7 @@ Auth.post('/login', validations, checkIfValidatorFailed, async (req, res, next) 
         }
         return res.json({
             token: sign({ sub: user.id }, process.env.secretKey),
+            role: user.role,
         });
     } catch (err) {
         next(err);

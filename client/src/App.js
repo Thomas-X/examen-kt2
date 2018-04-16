@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { Footer } from './components/Footer';
-import Contact from './routes/Contact';
-import Login from './routes/Login';
-import Navigation from './components/Navigation';
-import Register from './routes/Register';
-import Home from './routes/Home';
+import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
+import { Footer } from './components/Footer';
+import Navigation from './components/Navigation';
+import Contact from './routes/Contact';
+import Home from './routes/Home';
+import Login from './routes/Login';
+import Register from './routes/Register';
+import ViewCursussen from './routes/ViewCursussen';
 
-type RoutesType = {
-    [key: string]: {
-        component: React.ComponentClass | React.SFC,
-        exact: boolean,
-        path: string,
-    }
-};
-
-export const ROUTES: any = {
+export const ROUTES = {
     contact: {
         component: Contact,
         exact: true,
         path: '/contact',
+        isPrivate: true,
     },
     home: {
         component: Home,
@@ -37,6 +32,12 @@ export const ROUTES: any = {
         exact: true,
         path: '/register',
     },
+    viewcursussen: {
+        component: ViewCursussen,
+        exact: true,
+        path: '/viewcursussen',
+        isMedewerkersOnly: true,
+    },
 };
 
 const BodyContainer = styled.div`
@@ -46,13 +47,27 @@ const BodyContainer = styled.div`
     } 
 `;
 
+const RouteComponent = connect(
+    state => ({
+        user: state.user,
+    }),
+)(props => {
+    if (props.isPrivate === true && props.user.isLoggedIn === false) {
+        return <Redirect to={ROUTES.home.path}/>;
+    }
+    if (props.isMedewerkersOnly === true && props.user.role !== 'medewerker') {
+        return <Redirect to={ROUTES.home.path}/>;
+    }
+    return <Route {...props}/>;
+});
+
 const App = () => {
     return (
         <div>
             <Navigation/>
             <BodyContainer>
                 <Switch>
-                    {Object.keys(ROUTES).map((routeKey, index) => <Route key={index} {...ROUTES[routeKey]}/>)}
+                    {Object.keys(ROUTES).map((routeKey, index) => <RouteComponent key={index} {...ROUTES[routeKey]}/>)}
                 </Switch>
             </BodyContainer>
             <Footer/>

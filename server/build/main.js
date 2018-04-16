@@ -62,14 +62,14 @@ module.exports =
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(9);
+module.exports = __webpack_require__(8);
 
 
 /***/ }),
@@ -82,89 +82,70 @@ module.exports = require("express");
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("chalk");
+module.exports = require("mongoose");
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("is-js");
+var mongoose = __webpack_require__(2);
+
+var schema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true },
+    username: { type: String, maxLength: 255, required: true, unique: true },
+    password: { type: String, maxLength: 255, required: true },
+    role: { type: String, maxLength: 255, default: 'gebruiker' }
+});
+
+var Cursist = mongoose.model('Cursist', schema);
+
+module.exports = Cursist;
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("mongoose");
+module.exports = require("chalk");
 
 /***/ }),
 /* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_express__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_express__);
-
-
-var Home = Object(__WEBPACK_IMPORTED_MODULE_0_express__["Router"])();
-
-Home.get('/', function (req, res) {
-    res.send('hi from api / backend');
-});
-
-/* harmony default export */ __webpack_exports__["a"] = (Home);
+module.exports = require("is-js");
 
 /***/ }),
 /* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mongoose__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mongoose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mongoose__);
+module.exports = __webpack_require__(7);
 
-
-var schema = new __WEBPACK_IMPORTED_MODULE_0_mongoose___default.a.Schema({
-    id: { type: String, required: true, unique: true },
-    username: { type: String, maxLength: 255, required: true, unique: true },
-    password: { type: String, maxLength: 255, required: true }
-});
-
-var User = __WEBPACK_IMPORTED_MODULE_0_mongoose___default.a.model('User', schema);
-
-/* harmony default export */ __webpack_exports__["a"] = (User);
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(8);
-
-
-/***/ }),
-/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_body_parser__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_body_parser__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_body_parser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_body_parser__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chalk__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chalk__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chalk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_chalk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_cors__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_cors__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_cors___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_cors__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_express__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_express__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_http__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_http__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_http___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_http__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ip__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ip__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ip__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_is_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_is_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_is_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_is_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_mongoose__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_mongoose__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_mongoose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_mongoose__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__factories_createAuthHandler__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__global_constants__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__factories_createAuthHandler__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__global_constants__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_log__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__socket__ = __webpack_require__(26);
 
@@ -191,9 +172,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 
-var MONGO_URI = __webpack_require__(23).MONGO_URI;
+var MONGO_URI = __webpack_require__(28).MONGO_URI;
 
-__webpack_require__(28).config();
+__webpack_require__(29).config();
 
 var Server = function Server() {
     var _this = this;
@@ -215,9 +196,9 @@ var Server = function Server() {
         Object(__WEBPACK_IMPORTED_MODULE_11__services_log__["b" /* info */])(__WEBPACK_IMPORTED_MODULE_2_chalk___default()(_templateObject2, __WEBPACK_IMPORTED_MODULE_6_ip___default.a.address('private'), _this.port.toString()));
     };
 
-    this.connectToDb = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+    this.connectToDb = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
         var db;
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
@@ -259,9 +240,9 @@ var Server = function Server() {
             }
         }, _callee, _this, [[0, 8]]);
     }));
-    this.start = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2() {
+    this.start = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2() {
         var http;
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
@@ -348,49 +329,54 @@ var Server = function Server() {
 
 /* harmony default export */ __webpack_exports__["default"] = (new Server());
 
+process.on('unhandledRejection', function () {
+    // Handle unhandledrejection if needed, if nothing is here unhandled rejections will get ignored
+});
+
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("regenerator-runtime");
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("body-parser");
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("cors");
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("http");
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports = require("ip");
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return authMiddleware; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_passport__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_passport__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_passport___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_passport__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_passport_jwt__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_passport_jwt__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_passport_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_passport_jwt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_models_User__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_models_Cursist__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__global_models_Cursist___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__global_models_Cursist__);
 
 
 var _this = this;
@@ -408,14 +394,14 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
     };
 
     __WEBPACK_IMPORTED_MODULE_1_passport___default.a.use(new __WEBPACK_IMPORTED_MODULE_2_passport_jwt__["Strategy"](options, function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(jwtPayload, done) {
+        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(jwtPayload, done) {
             var user;
-            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
                 while (1) {
                     switch (_context.prev = _context.next) {
                         case 0:
                             _context.next = 2;
-                            return __WEBPACK_IMPORTED_MODULE_3__global_models_User__["a" /* default */].find({ id: jwtPayload.sub });
+                            return __WEBPACK_IMPORTED_MODULE_3__global_models_Cursist___default.a.find({ id: jwtPayload.sub });
 
                         case 2:
                             user = _context.sent[0];
@@ -447,26 +433,40 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 var authMiddleware = __WEBPACK_IMPORTED_MODULE_1_passport___default.a.authenticate('jwt', { session: false });
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = require("passport");
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("passport-jwt");
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export ROLES */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ROUTES; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__controllers_auth__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__controllers_home__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__controllers_auth__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__controllers_home__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_Cursus__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_Cursus___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__models_Cursus__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_Cursist__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_Cursist___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__models_Cursist__);
+
+
+var _this = this;
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+
+
 
 
 
@@ -478,12 +478,12 @@ var ROLES = {
 
 var ROUTES = [{
     path: '/',
-    controller: __WEBPACK_IMPORTED_MODULE_1__controllers_home__["a" /* default */],
+    controller: __WEBPACK_IMPORTED_MODULE_2__controllers_home__["a" /* default */],
     allowedRoles: [],
     isPrivate: false
 }, {
     path: '/auth',
-    controller: __WEBPACK_IMPORTED_MODULE_0__controllers_auth__["a" /* default */],
+    controller: __WEBPACK_IMPORTED_MODULE_1__controllers_auth__["a" /* default */],
     allowedRoles: [],
     isPrivate: false
 }, {
@@ -493,28 +493,169 @@ var ROUTES = [{
     },
     allowedRoles: [],
     isPrivate: true
+}, {
+    path: '/api/getAllCursus',
+    controller: function () {
+        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res) {
+            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                while (1) {
+                    switch (_context.prev = _context.next) {
+                        case 0:
+                            _context.t0 = res;
+                            _context.next = 3;
+                            return __WEBPACK_IMPORTED_MODULE_3__models_Cursus___default.a.find({});
+
+                        case 3:
+                            _context.t1 = _context.sent;
+                            _context.t2 = {
+                                cursussen: _context.t1
+                            };
+
+                            _context.t0.json.call(_context.t0, _context.t2);
+
+                        case 6:
+                        case 'end':
+                            return _context.stop();
+                    }
+                }
+            }, _callee, _this);
+        }));
+
+        function controller(_x, _x2) {
+            return _ref.apply(this, arguments);
+        }
+
+        return controller;
+    }(),
+    allowedRoles: [],
+    isPrivate: false
+}, {
+    path: '/api/getAllCursistenFromCursus',
+    controller: function () {
+        var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res) {
+            var cursisten, cursusId, cursus, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, inschrijving, cursist;
+
+            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+                while (1) {
+                    switch (_context2.prev = _context2.next) {
+                        case 0:
+                            cursisten = [];
+                            cursusId = req.body.cursusId;
+                            _context2.next = 4;
+                            return __WEBPACK_IMPORTED_MODULE_3__models_Cursus___default.a.find({ id: cursusId });
+
+                        case 4:
+                            cursus = _context2.sent[0];
+
+                            if (!cursus.inschrijvingen) {
+                                res.json({
+                                    cursisten: []
+                                });
+                            }
+                            _iteratorNormalCompletion = true;
+                            _didIteratorError = false;
+                            _iteratorError = undefined;
+                            _context2.prev = 9;
+                            _iterator = cursus.inschrijvingen[Symbol.iterator]();
+
+                        case 11:
+                            if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {
+                                _context2.next = 20;
+                                break;
+                            }
+
+                            inschrijving = _step.value;
+                            _context2.next = 15;
+                            return __WEBPACK_IMPORTED_MODULE_4__models_Cursist___default.a.find({ id: inschrijving });
+
+                        case 15:
+                            cursist = _context2.sent[0];
+
+                            cursisten.push(cursist);
+
+                        case 17:
+                            _iteratorNormalCompletion = true;
+                            _context2.next = 11;
+                            break;
+
+                        case 20:
+                            _context2.next = 26;
+                            break;
+
+                        case 22:
+                            _context2.prev = 22;
+                            _context2.t0 = _context2['catch'](9);
+                            _didIteratorError = true;
+                            _iteratorError = _context2.t0;
+
+                        case 26:
+                            _context2.prev = 26;
+                            _context2.prev = 27;
+
+                            if (!_iteratorNormalCompletion && _iterator.return) {
+                                _iterator.return();
+                            }
+
+                        case 29:
+                            _context2.prev = 29;
+
+                            if (!_didIteratorError) {
+                                _context2.next = 32;
+                                break;
+                            }
+
+                            throw _iteratorError;
+
+                        case 32:
+                            return _context2.finish(29);
+
+                        case 33:
+                            return _context2.finish(26);
+
+                        case 34:
+                            res.json({
+                                cursisten: cursisten
+                            });
+
+                        case 35:
+                        case 'end':
+                            return _context2.stop();
+                    }
+                }
+            }, _callee2, _this, [[9, 22, 26, 34], [27,, 29, 33]]);
+        }));
+
+        function controller(_x3, _x4) {
+            return _ref2.apply(this, arguments);
+        }
+
+        return controller;
+    }(),
+    allowedRoles: [],
+    isPrivate: false
 }];
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bcrypt__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bcrypt__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bcrypt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bcrypt__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_express__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_express_validator_check__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_express_validator_check__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_express_validator_check___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_express_validator_check__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_is_js__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_is_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_is_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_is_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonwebtoken__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonwebtoken__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonwebtoken___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jsonwebtoken__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_uuid_v4__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_uuid_v4__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_uuid_v4___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_uuid_v4__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global_models_User__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global_models_Cursist__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global_models_Cursist___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__global_models_Cursist__);
 
 
 var _this = this;
@@ -543,8 +684,8 @@ var validations = function validations(req, res, next) {
 // ];
 
 var checkIfValidatorFailed = function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res, next) {
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res, next) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
@@ -571,17 +712,17 @@ var checkIfValidatorFailed = function () {
 }();
 
 Auth.post('/register', validations, checkIfValidatorFailed, function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res, next) {
-        var _req$body, username, password1, user, id, _user;
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res, next) {
+        var _req$body, username, password1, user, id, _user, usr;
 
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
                         _context2.prev = 0;
                         _req$body = req.body, username = _req$body.username, password1 = _req$body.password1;
                         _context2.next = 4;
-                        return __WEBPACK_IMPORTED_MODULE_7__global_models_User__["a" /* default */].find({ username: username });
+                        return __WEBPACK_IMPORTED_MODULE_7__global_models_Cursist___default.a.find({ username: username });
 
                     case 4:
                         user = _context2.sent[0];
@@ -598,7 +739,7 @@ Auth.post('/register', validations, checkIfValidatorFailed, function () {
 
                     case 10:
                         if (__WEBPACK_IMPORTED_MODULE_4_is_js___default.a.set(user)) {
-                            _context2.next = 21;
+                            _context2.next = 24;
                             break;
                         }
 
@@ -616,29 +757,35 @@ Auth.post('/register', validations, checkIfValidatorFailed, function () {
                             password: _context2.t2
                         };
                         _context2.next = 20;
-                        return __WEBPACK_IMPORTED_MODULE_7__global_models_User__["a" /* default */].create(_user);
+                        return __WEBPACK_IMPORTED_MODULE_7__global_models_Cursist___default.a.create(_user);
 
                     case 20:
+                        _context2.next = 22;
+                        return __WEBPACK_IMPORTED_MODULE_7__global_models_Cursist___default.a.find({ id: id });
+
+                    case 22:
+                        usr = _context2.sent[0];
                         return _context2.abrupt('return', res.json({
-                            token: Object(__WEBPACK_IMPORTED_MODULE_5_jsonwebtoken__["sign"])({ sub: id }, process.env.secretKey)
+                            token: Object(__WEBPACK_IMPORTED_MODULE_5_jsonwebtoken__["sign"])({ sub: id }, process.env.secretKey),
+                            role: usr.role
                         }));
 
-                    case 21:
-                        _context2.next = 26;
+                    case 24:
+                        _context2.next = 29;
                         break;
 
-                    case 23:
-                        _context2.prev = 23;
+                    case 26:
+                        _context2.prev = 26;
                         _context2.t3 = _context2['catch'](0);
 
                         next(_context2.t3);
 
-                    case 26:
+                    case 29:
                     case 'end':
                         return _context2.stop();
                 }
             }
-        }, _callee2, _this, [[0, 23]]);
+        }, _callee2, _this, [[0, 26]]);
     }));
 
     return function (_x4, _x5, _x6) {
@@ -647,17 +794,17 @@ Auth.post('/register', validations, checkIfValidatorFailed, function () {
 }());
 
 Auth.post('/login', validations, checkIfValidatorFailed, function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(req, res, next) {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(req, res, next) {
         var _req$body2, username, password1, user;
 
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
             while (1) {
                 switch (_context3.prev = _context3.next) {
                     case 0:
                         _context3.prev = 0;
                         _req$body2 = req.body, username = _req$body2.username, password1 = _req$body2.password1;
                         _context3.next = 4;
-                        return __WEBPACK_IMPORTED_MODULE_7__global_models_User__["a" /* default */].find({ username: username });
+                        return __WEBPACK_IMPORTED_MODULE_7__global_models_Cursist___default.a.find({ username: username });
 
                     case 4:
                         user = _context3.sent[0];
@@ -689,7 +836,8 @@ Auth.post('/login', validations, checkIfValidatorFailed, function () {
 
                     case 13:
                         return _context3.abrupt('return', res.json({
-                            token: Object(__WEBPACK_IMPORTED_MODULE_5_jsonwebtoken__["sign"])({ sub: user.id }, process.env.secretKey)
+                            token: Object(__WEBPACK_IMPORTED_MODULE_5_jsonwebtoken__["sign"])({ sub: user.id }, process.env.secretKey),
+                            role: user.role
                         }));
 
                     case 16:
@@ -714,34 +862,64 @@ Auth.post('/login', validations, checkIfValidatorFailed, function () {
 /* harmony default export */ __webpack_exports__["a"] = (Auth);
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("bcrypt");
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports) {
 
 module.exports = require("express-validator/check");
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports) {
 
 module.exports = require("jsonwebtoken");
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports) {
 
 module.exports = require("uuid/v4");
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports) {
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports.MONGO_URI = 'mongodb://127.0.0.1/proefExamenTest';
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_express__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_express__);
+
+
+var Home = Object(__WEBPACK_IMPORTED_MODULE_0_express__["Router"])();
+
+Home.get('/', function (req, res) {
+    res.send('hi from api / backend');
+});
+
+/* harmony default export */ __webpack_exports__["a"] = (Home);
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var mongoose = __webpack_require__(2);
+
+var schema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true },
+    cursustitel: { type: String, required: true },
+    cursusprijs: { type: Number },
+    begindatum: { type: String, required: true },
+    einddatum: { type: String, required: true },
+    inschrijvingen: { type: [] }
+});
+
+var Cursus = mongoose.model('Cursus', schema);
+
+module.exports = Cursus;
 
 /***/ }),
 /* 24 */
@@ -752,7 +930,7 @@ module.exports.MONGO_URI = 'mongodb://127.0.0.1/proefExamenTest';
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return error; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return warn; });
 /* unused harmony export debug */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chalk__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chalk__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chalk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_chalk__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stack_trace__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_stack_trace___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_stack_trace__);
@@ -887,6 +1065,12 @@ module.exports = require("socket.io");
 
 /***/ }),
 /* 28 */
+/***/ (function(module, exports) {
+
+module.exports.MONGO_URI = 'mongodb://127.0.0.1/zeilschooldewaai';
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = require("dotenv");

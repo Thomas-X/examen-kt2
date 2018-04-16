@@ -1,1 +1,1 @@
-module.exports.MONGO_URI = 'mongodb://127.0.0.1/proefExamenTest';
+module.exports.MONGO_URI = 'mongodb://127.0.0.1/zeilschooldewaai';

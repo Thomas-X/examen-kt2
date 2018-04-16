@@ -1,6 +1,6 @@
 import passport from 'passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
-import User from '../global/models/User';
+import User from '../global/models/Cursist';
 
 export default () => {
     const options = {
