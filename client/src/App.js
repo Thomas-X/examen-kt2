@@ -15,7 +15,6 @@ export const ROUTES = {
         component: Contact,
         exact: true,
         path: '/contact',
-        isPrivate: true,
     },
     home: {
         component: Home,

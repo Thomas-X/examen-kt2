@@ -126,8 +126,8 @@ module.exports = __webpack_require__(7);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_body_parser__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_body_parser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_body_parser__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chalk__ = __webpack_require__(4);
@@ -196,9 +196,9 @@ var Server = function Server() {
         Object(__WEBPACK_IMPORTED_MODULE_11__services_log__["b" /* info */])(__WEBPACK_IMPORTED_MODULE_2_chalk___default()(_templateObject2, __WEBPACK_IMPORTED_MODULE_6_ip___default.a.address('private'), _this.port.toString()));
     };
 
-    this.connectToDb = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+    this.connectToDb = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
         var db;
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
@@ -207,6 +207,7 @@ var Server = function Server() {
                         __WEBPACK_IMPORTED_MODULE_8_mongoose___default.a.connect(MONGO_URI, {
                             useMongoClient: true
                         });
+
                         __WEBPACK_IMPORTED_MODULE_8_mongoose___default.a.Promise = global.Promise;
                         db = __WEBPACK_IMPORTED_MODULE_8_mongoose___default.a.connection;
 
@@ -240,9 +241,9 @@ var Server = function Server() {
             }
         }, _callee, _this, [[0, 8]]);
     }));
-    this.start = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2() {
+    this.start = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2() {
         var http;
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
@@ -369,8 +370,8 @@ module.exports = require("ip");
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return authMiddleware; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_passport__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_passport___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_passport__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_passport_jwt__ = __webpack_require__(15);
@@ -394,9 +395,9 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
     };
 
     __WEBPACK_IMPORTED_MODULE_1_passport___default.a.use(new __WEBPACK_IMPORTED_MODULE_2_passport_jwt__["Strategy"](options, function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(jwtPayload, done) {
+        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(jwtPayload, done) {
             var user;
-            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
                 while (1) {
                     switch (_context.prev = _context.next) {
                         case 0:
@@ -451,8 +452,8 @@ module.exports = require("passport-jwt");
 "use strict";
 /* unused harmony export ROLES */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ROUTES; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__controllers_auth__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__controllers_home__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_Cursus__ = __webpack_require__(23);
@@ -496,8 +497,8 @@ var ROUTES = [{
 }, {
     path: '/api/getAllCursus',
     controller: function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res) {
-            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+        var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res) {
+            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
                 while (1) {
                     switch (_context.prev = _context.next) {
                         case 0:
@@ -532,10 +533,10 @@ var ROUTES = [{
 }, {
     path: '/api/getAllCursistenFromCursus',
     controller: function () {
-        var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res) {
+        var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res) {
             var cursisten, cursusId, cursus, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, inschrijving, cursist;
 
-            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+            return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
                 while (1) {
                     switch (_context2.prev = _context2.next) {
                         case 0:
@@ -640,8 +641,8 @@ var ROUTES = [{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bcrypt__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bcrypt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bcrypt__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(1);
@@ -684,8 +685,8 @@ var validations = function validations(req, res, next) {
 // ];
 
 var checkIfValidatorFailed = function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res, next) {
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(req, res, next) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
@@ -712,10 +713,10 @@ var checkIfValidatorFailed = function () {
 }();
 
 Auth.post('/register', validations, checkIfValidatorFailed, function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res, next) {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(req, res, next) {
         var _req$body, username, password1, user, id, _user, usr;
 
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
@@ -794,10 +795,10 @@ Auth.post('/register', validations, checkIfValidatorFailed, function () {
 }());
 
 Auth.post('/login', validations, checkIfValidatorFailed, function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(req, res, next) {
+    var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(req, res, next) {
         var _req$body2, username, password1, user;
 
-        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_exams_exams_really_really_really_final_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+        return __WEBPACK_IMPORTED_MODULE_0__Users_thomaszwarts_gitrepos_examen_kt2_server_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
             while (1) {
                 switch (_context3.prev = _context3.next) {
                     case 0:

@@ -79,13 +79,13 @@ function connectToDb () {
                                         id: '12345',
                                         username: 'thomas-2',
                                         password: encryptedPassword,
-                                        role: 'medewerker',
+                                        role: 'gebruiker',
                                     }, function () {
                                         Cursist.create({
                                             id: '1234567',
                                             username: 'thomas-3',
                                             password: encryptedPassword,
-                                            role: 'medewerker',
+                                            role: 'gebruiker',
                                         }, function () {
                                             // then afterwards close the seeder..
                                             process.exit();

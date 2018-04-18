@@ -19,7 +19,7 @@ export const Footer = (props) => {
 
     return (
         <Container>
-            <Text>Copright &copy; Zeilschool de Waai 2018</Text>
+            <Text>Copyright &copy; Zeilschool de Waai 2018</Text>
         </Container>
     );
 };

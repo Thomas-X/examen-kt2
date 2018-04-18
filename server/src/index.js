@@ -45,6 +45,7 @@ class Server {
             mongoose.connect(MONGO_URI, {
                 useMongoClient: true,
             });
+
             mongoose.Promise = global.Promise;
             const db = mongoose.connection;
 

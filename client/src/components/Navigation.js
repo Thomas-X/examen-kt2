@@ -69,7 +69,7 @@ const Navigation = (props) => {
         <Nav>
             <Left>
                 {renderNavItem('Home', ROUTES.home.path, 3)}
-                {isLoggedIn && (renderNavItem('Contact', ROUTES.contact.path, 4))}
+                {(renderNavItem('Contact', ROUTES.contact.path, 4))}
                 {(isLoggedIn && role === 'medewerker') && (renderNavItem('Cursussen overzicht', ROUTES.viewcursussen.path, 5))}
             </Left>
             <Right>
