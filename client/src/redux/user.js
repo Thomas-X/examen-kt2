@@ -77,5 +77,5 @@ export const clearError = () => ({
 
 });
 
-export const onLogin = baseFunc('http://localhost:3004/auth/login');
-export const onRegister = baseFunc('http://localhost:3004/auth/register');
+export const onLogin = baseFunc('http://206.189.9.129:3004/auth/login');
+export const onRegister = baseFunc('http://206.189.9.129:3004/auth/register');
