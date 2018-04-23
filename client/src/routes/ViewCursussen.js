@@ -35,7 +35,7 @@ class ViewCursussen extends React.Component {
     };
 
     componentDidMount () {
-        axios.get('http://206.189.9.129:3004/api/getAllCursus')
+        axios.get('http://206.189.9.129:443/api/getAllCursus')
             .then(res => {
                 this.setState({
                     data: res.data,
