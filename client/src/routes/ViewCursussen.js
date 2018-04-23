@@ -73,7 +73,7 @@ class ViewCursussen extends React.Component {
 
     componentDidUpdate (prevProps, prevState) {
         if (prevState.selectedOption.length > 0 || prevState.selectedOption !== this.state.selectedOption) {
-            axios.post('http://206.189.9.129:3004/api/getAllCursistenFromCursus', { cursusId: this.state.selectedOption.value })
+            axios.post('http://206.189.9.129:443/api/getAllCursistenFromCursus', { cursusId: this.state.selectedOption.value })
                 .then(response => {
                     this.setState({
                         cursistenData: response.data,
