@@ -20,7 +20,7 @@ class Server {
 
     constructor () {
         this.app = express();
-        this.port = process.env.PORT || 3004;
+        this.port = 443;
         this.connectToDb()
             .catch(err => error(err));
     }
