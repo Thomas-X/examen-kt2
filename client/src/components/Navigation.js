@@ -68,6 +68,7 @@ const Navigation = (props) => {
     return (
         <Nav>
             <Left>
+                <img src="https://i.imgur.com/SpobGDB.png" style={{ width: '95px', height: '99px' }}/>
                 {renderNavItem('Home', ROUTES.home.path, 3)}
                 {(renderNavItem('Contact', ROUTES.contact.path, 4))}
                 {(isLoggedIn && role === 'medewerker') && (renderNavItem('Cursussen overzicht', ROUTES.viewcursussen.path, 5))}
