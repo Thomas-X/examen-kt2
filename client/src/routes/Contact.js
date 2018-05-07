@@ -33,6 +33,11 @@ class Contact extends React.Component {
                     <ContactRow title={'Adres'} desc={'Sesamstraat 123'}/>
                     <ContactRow title={'Telefoonnummer'} desc={'06123123'}/>
                     <ContactRow title={'Email adres'} desc={'zeilschool@dewaai.nl'}/>
+                    <h3>De administratie vab zeilschool De Waai is bereikbaar op:</h3>
+                    <ContactRow title={'Maandag - Vrijdag:'} desc={'9:00 uur - 17:00 uur'}/>
+                    <ContactRow title={'Zaterdag:'} desc={'9:00 uur - 16:00 uur'}/>
+                    <ContactRow title={'Zondag:'} desc={'12:00 - 16:00 uur'}/>
+                    <ContactRow title={'Nationale feestdagen:'} desc={'gesloten'}/>
             </div>
         );
     }
