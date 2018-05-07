@@ -155,6 +155,8 @@ class ViewCursussen extends React.Component {
 
                         <div style={{ padding: '2rem' }}/>
 
+                        <button class="btn btn-primary">Overzichten</button>
+
                         {/* Show cursus variant of ReactTable if no cursus was selected */}
                         {
                             this.state.selectedOption.length <= 0 &&
@@ -189,6 +191,8 @@ class ViewCursussen extends React.Component {
                                 ]}
                             />
                         }
+                        <button class="btn btn-primary">Overzichten</button>
+                                         
                         {this.state.selectedOption.length <= 0 &&
                         <h3 style={{ textAlign: 'right' }}>Totaal: &euro;&thinsp;{(sum / 100).toFixed(2)},-</h3>}
 
